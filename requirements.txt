@@ -1,8 +1,12 @@
 pandas 
 numpy 
+matplotlib
+geopandas
+networkx
 scikit-learn
 folium
 osmnx
 geopy
 streamlit
-#-e .
+IPython
+# -e .
