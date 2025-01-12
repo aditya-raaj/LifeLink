@@ -7,6 +7,13 @@ The application uses advanced geospatial and machine learning techniques to ensu
 
 ---
 
+## **Preface**
+
+![](https://github.com/aditya-raaj/LifeLink/blob/main/notebook/data/Life%20Link.png?raw=true)
+![](https://github.com/aditya-raaj/LifeLink/blob/main/notebook/data/Life%20Link%202.png?raw=true)
+
+---
+
 ## **Features**
 ### **1. Closest Ambulance Finder**
 - Takes the **emergency address** as input.
