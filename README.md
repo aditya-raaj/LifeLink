@@ -45,42 +45,39 @@ The application leverages advanced geospatial and machine learning techniques to
 
 ---
 
-## **How It Works**
+## **How to Run the Project**
 
-### **Step 1: User Input**
-- The user enters the **emergency address** into a text field (e.g., "MG Road").
-- The application geocodes the address to retrieve its latitude and longitude.
+### **Prerequisites**
+Ensure you have the following installed:
+- Python 3.x
+- Required Python libraries (install using the command below)
 
-### **Step 2: Processing**
-1. **Locate the Nearest Ambulance**:
-   - Utilizes a **KNN model** to find the closest ambulance based on pre-stored location data.
-   - Ambulance data is stored in a CSV file (`final_dataset.csv`) containing:
-     - `license_plate`: Unique identifier for each ambulance.
-     - `location.latitudes`: Latitude of the ambulance.
-     - `location.longitudes`: Longitude of the ambulance.
+```bash
+pip install -r requirements.txt
+```
 
-2. **Shortest Path Calculation**:
-   - Extracts the road network of Bangalore using OpenStreetMap data.
-   - Computes the shortest route using Dijkstra’s algorithm.
-
-3. **Calculate ETA**:
-   - Adjusts ambulance speed dynamically based on the current hour's congestion level.
-   - Congestion levels are predefined for different times of the day.
-
-### **Step 3: Output**
-- **Emergency Location**:
-  - Displays address, latitude, and longitude of the emergency site.
-- **Closest Ambulance Information**:
-  - Shows license plate, current location, and distance from the emergency site.
-- **Estimated Time of Arrival (ETA)**:
-  - Displayed in minutes.
-- **Route Visualization**:
-  - An interactive map displaying the shortest route from the ambulance to the emergency location.
+### **Running the Application**
+1. Clone the repository:
+```bash
+git clone https://github.com/aditya-raaj/LifeLink.git
+```
+2. Navigate to the project directory:
+```bash
+cd LifeLink
+```
+3. Run the Streamlit application:
+```bash
+streamlit run app.py
+```
+4. Enter the emergency location in the input field and get the nearest ambulance details along with the optimized route.
 
 ---
 
 ## **Dataset**
-The dataset used in this project can be accessed here: https://catalogue.cos.iudx.org.in/
+The dataset used in this project can be accessed here: [IUDX Catalogue Link](#)
+
+(Note: The dataset is not uploaded to GitHub. Please use the provided link to access the data.)
+
 ---
 
 ## **Contributors**
