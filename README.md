@@ -1,39 +1,32 @@
 # 🚑 Life Link: Bangalore Closest Ambulance Route Finder
 
 ## **Overview**
-Life Link is an interactive web application designed to provide real-time assistance during medical emergencies. It identifies the closest available ambulance in Bangalore, calculates the shortest route to the emergency location, and provides an estimated time of arrival (ETA). The app also includes a **First Aid Instructions** feature, offering guidance for small and severe emergencies.
+Life Link is an interactive web application designed to provide real-time assistance during medical emergencies. It identifies the closest available ambulance in Bangalore, calculates the shortest route to the emergency location, and provides an estimated time of arrival (ETA). Additionally, the app includes a **First Aid Instructions** feature, offering guidance for minor and severe emergencies.
 
-The application uses advanced geospatial and machine learning techniques to ensure accurate location mapping, efficient routing, and timely response.
-
----
-
-## **Preface**
-
-![](https://github.com/aditya-raaj/LifeLink/blob/main/notebook/data/Life%20Link.png?raw=true)
-![](https://github.com/aditya-raaj/LifeLink/blob/main/notebook/data/Life%20Link%202.png?raw=true)
+The application leverages advanced geospatial and machine learning techniques to ensure accurate location mapping, efficient routing, and timely response.
 
 ---
 
 ## **Features**
 ### **1. Closest Ambulance Finder**
 - Takes the **emergency address** as input.
-- Locates the nearest ambulance based on its geographic coordinates using a **K-Nearest Neighbors (KNN)** model.
+- Locates the nearest ambulance using a **K-Nearest Neighbors (KNN)** model based on geographic coordinates.
 
 ### **2. Route Optimization**
 - Retrieves the road network of Bangalore from OpenStreetMap using the `osmnx` library.
-- Calculates the shortest route from the ambulance to the emergency location using **Dijkstra's shortest path algorithm**.
+- Computes the shortest route using **Dijkstra's shortest path algorithm**.
 
 ### **3. Estimated Time of Arrival (ETA)**
-- Considers current road congestion levels based on the time of day.
-- Dynamically adjusts the speed of the ambulance to provide an accurate ETA.
+- Accounts for real-time road congestion based on the time of day.
+- Dynamically adjusts the ambulance's speed to provide an accurate ETA.
 
 ### **4. Real-Time Map Visualization**
 - Displays the shortest route on an interactive **folium map**.
-- Highlights the ambulance's starting point and the emergency destination.
+- Highlights both the ambulance’s starting point and the emergency destination.
 
 ### **5. First Aid Instructions**
-- Offers essential first aid guidance for both small and severe emergencies.
-- Always accessible and persistent throughout the user session.
+- Provides essential first aid guidance for various medical emergencies.
+- Available throughout the user session for quick reference.
 
 ---
 
@@ -42,7 +35,7 @@ The application uses advanced geospatial and machine learning techniques to ensu
 - **Python**: Core programming language.
 - **Pandas**: Data manipulation for ambulance datasets.
 - **NumPy**: Numerical operations for geospatial calculations.
-- **scikit-learn**: KNN model for locating the nearest ambulance.
+- **scikit-learn**: KNN model for nearest ambulance detection.
 - **osmnx**: Road network extraction and shortest path computation.
 - **networkx**: Graph-based analysis for route calculations.
 
@@ -54,15 +47,15 @@ The application uses advanced geospatial and machine learning techniques to ensu
 
 ## **How It Works**
 
-### **Input**
-1. The user enters the **emergency address** into a text field (e.g., "MG Road").
-2. The application geocodes the address to retrieve its latitude and longitude.
+### **Step 1: User Input**
+- The user enters the **emergency address** into a text field (e.g., "MG Road").
+- The application geocodes the address to retrieve its latitude and longitude.
 
-### **Processing**
+### **Step 2: Processing**
 1. **Locate the Nearest Ambulance**:
-   - Uses a **KNN model** to find the closest ambulance based on pre-stored latitude and longitude data.
-   - Ambulance data is stored in a CSV file (`final_dataset.csv`) with columns:
-     - `license_plate`: Unique identifier for the ambulance.
+   - Utilizes a **KNN model** to find the closest ambulance based on pre-stored location data.
+   - Ambulance data is stored in a CSV file (`final_dataset.csv`) containing:
+     - `license_plate`: Unique identifier for each ambulance.
      - `location.latitudes`: Latitude of the ambulance.
      - `location.longitudes`: Longitude of the ambulance.
 
@@ -72,21 +65,25 @@ The application uses advanced geospatial and machine learning techniques to ensu
 
 3. **Calculate ETA**:
    - Adjusts ambulance speed dynamically based on the current hour's congestion level.
-   - Congestion levels are predefined for each hour of the day.
+   - Congestion levels are predefined for different times of the day.
 
-### **Output**
+### **Step 3: Output**
 - **Emergency Location**:
-  - Address, latitude, and longitude of the emergency site.
+  - Displays address, latitude, and longitude of the emergency site.
 - **Closest Ambulance Information**:
-  - License plate, current location, and distance from the emergency site.
+  - Shows license plate, current location, and distance from the emergency site.
 - **Estimated Time of Arrival (ETA)**:
   - Displayed in minutes.
 - **Route Visualization**:
-  - An interactive map showing the shortest route from the ambulance to the emergency location.
+  - An interactive map displaying the shortest route from the ambulance to the emergency location.
 
 ---
-## Contributors
+
+## **Dataset**
+The dataset used in this project can be accessed here: https://catalogue.cos.iudx.org.in/
+---
+
+## **Contributors**
 
 -  **Aditya Raj** ([GitHub Profile](https://github.com/aditya-raaj))
 -  **Mayur** ([GitHub Profile](https://github.com/mayurmk1704))
-
