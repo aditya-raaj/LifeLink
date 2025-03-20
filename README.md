@@ -29,6 +29,18 @@
 ✅ **Intelligent Dispatch System** – Suggests alternative routes during peak hours  
 
 ---
+## 🏭 Collaboration with CDPG
+This project was developed in collaboration with the **Center of Data for Public Good (CDPG)**. The project was executed using **Indian Urban Data Exchange (IUDX) Catalogue data** as part of an industry-academic initiative.
+
+### **Contributors**
+
+- [Aditya Raj](https://github.com/username1)
+- [Maxson Mathew](https://www.linkedin.com/in/maxson-mathew-9022082b1/)
+- [Mayur](https://www.linkedin.com/in/mayurmk1704/)
+- [Nupreeth Mandappa K V](https://www.linkedin.com/in/nupreeth-mandappa-k-v-252876253/)
+
+
+---
 
 ## 🛠️ Tech Stack  
 | **Category**    | **Technologies Used**  |
