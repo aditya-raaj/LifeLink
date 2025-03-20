@@ -34,7 +34,7 @@ This project was developed in collaboration with the **Center of Data for Public
 
 ### **Contributors**
 
-- [Aditya Raj](https://github.com/username1)
+- [Aditya Raj](https://www.linkedin.com/in/aditya-lin/)
 - [Maxson Mathew](https://www.linkedin.com/in/maxson-mathew-9022082b1/)
 - [Mayur](https://www.linkedin.com/in/mayurmk1704/)
 - [Nupreeth Mandappa K V](https://www.linkedin.com/in/nupreeth-mandappa-k-v-252876253/)
